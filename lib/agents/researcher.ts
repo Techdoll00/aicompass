@@ -3,6 +3,7 @@ import { stepCountIs, tool, ToolLoopAgent } from 'ai'
 import type { ResearcherTools } from '@/lib/types/agent'
 import { type Model } from '@/lib/types/models'
 
+import { aihotTool } from '../tools/aihot'
 import { fetchTool } from '../tools/fetch'
 import { createQuestionTool } from '../tools/question'
 import { createSearchTool } from '../tools/search'
@@ -100,7 +101,7 @@ export function createResearcher({
           '[Researcher] Quick mode: maxSteps=20, tools=[search, fetch]'
         )
         systemPrompt = getQuickModePrompt(relatedEnabled)
-        activeToolsList = ['search', 'fetch']
+        activeToolsList = ['search', 'aihot', 'fetch']
         maxSteps = 20
         searchTool = wrapSearchToolForQuickMode(originalSearchTool)
         break
@@ -108,7 +109,7 @@ export function createResearcher({
       case 'adaptive':
       default:
         systemPrompt = getAdaptiveModePrompt(relatedEnabled)
-        activeToolsList = ['search', 'fetch', 'todoWrite']
+        activeToolsList = ['search', 'aihot', 'fetch', 'todoWrite']
         console.log(
           `[Researcher] Adaptive mode: maxSteps=50, tools=[${activeToolsList.join(', ')}]`
         )
@@ -120,6 +121,7 @@ export function createResearcher({
     // Build tools object with proper typing
     const tools: ResearcherTools = {
       search: searchTool,
+      aihot: aihotTool,
       fetch: fetchTool,
       askQuestion: askQuestionTool,
       ...todoTools

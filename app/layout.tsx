@@ -27,12 +27,12 @@ const fontSans = FontSans({
   variable: '--font-sans'
 })
 
-const title = 'Morphic'
+const title = 'AI Compass'
 const description =
-  'A fully open-source AI-powered answer engine with a generative UI.'
+  'A bilingual AI learning search platform for college students.'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://morphic.sh'),
+  metadataBase: new URL('https://ai-compass.local'),
   title,
   description,
   openGraph: {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title,
     description,
     card: 'summary_large_image',
-    creator: '@miiura'
+    creator: '@ai_compass'
   }
 }
 

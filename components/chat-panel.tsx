@@ -14,13 +14,17 @@ import { UseChatHelpers } from '@ai-sdk/react'
 import {
   IconArrowsDiagonal as ArrowsDiagonal,
   IconArrowUp as ArrowUp,
+  IconBook2 as Book,
   IconChevronDown as ChevronDown,
   IconFileText as FileText,
   IconLibrary as LibraryIcon,
   IconMessageCirclePlus as MessageCirclePlus,
+  IconNews as News,
   IconPaperclip as Paperclip,
   IconPlus as Plus,
+  IconRoute as Route,
   IconSquare as Square,
+  IconWorldSearch as WorldSearch,
   IconX as X
 } from '@tabler/icons-react'
 import { toast } from 'sonner'
@@ -71,6 +75,29 @@ const PASTE_CARD_MIN_CHARS = 400
 // time so the existing fetch tool picks it up.
 const BARE_URL_RE = /^https?:\/\/\S+$/
 const ALLOWED_FILE_TYPES = ['image/png', 'image/jpeg', 'application/pdf']
+
+const learningCards = [
+  {
+    icon: Book,
+    title: 'Curated AI Library',
+    text: 'Stanford, MIT, Harvard, OpenAI, Anthropic, Hugging Face and framework docs.'
+  },
+  {
+    icon: WorldSearch,
+    title: 'Cited WebSearch',
+    text: 'Search current AI topics and keep source links for verification.'
+  },
+  {
+    icon: News,
+    title: 'AIHOT Briefing',
+    text: 'Turn fresh AI news into learning cards, concepts and discussion prompts.'
+  },
+  {
+    icon: Route,
+    title: 'Project Pathways',
+    text: 'Convert research into MVP scope, GitHub keywords and demo plans.'
+  }
+]
 
 function getSearchModeSnapshot(): SearchMode {
   return getCookie('searchMode') === 'adaptive' ? 'adaptive' : 'quick'
@@ -438,11 +465,40 @@ export function ChatPanel({
       )}
     >
       {messages.length === 0 && (
-        <div className="mb-6 md:mb-10 flex flex-col items-center gap-2 md:gap-4">
-          <IconBlinkingLogo className="size-12" />
-          <h1 className="text-xl md:text-2xl font-medium text-foreground">
-            What would you like to know?
-          </h1>
+        <div className="mb-6 md:mb-10 flex w-full flex-col items-center gap-4 md:gap-5">
+          <div className="flex items-center gap-3">
+            <IconBlinkingLogo className="size-11" />
+            <div className="text-left">
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+                AI Compass
+              </p>
+              <h1 className="text-xl font-semibold text-foreground md:text-2xl">
+                大学生 AI 学习搜索平台
+              </h1>
+            </div>
+          </div>
+          <p className="max-w-2xl text-center text-sm leading-6 text-muted-foreground md:text-base">
+            搜索最新 AI 动态，检索中英文公开学习资料，并把答案整理成引用来源、术语卡片、学习路径和项目方案。
+          </p>
+          <div className="grid w-full max-w-3xl grid-cols-1 gap-2 sm:grid-cols-2">
+            {learningCards.map(card => {
+              const Icon = card.icon
+              return (
+                <div
+                  key={card.title}
+                  className="rounded-2xl border border-input bg-muted/45 p-3 text-left"
+                >
+                  <div className="mb-2 flex items-center gap-2 text-sm font-medium text-foreground">
+                    <Icon className="size-4 text-amber-500" />
+                    {card.title}
+                  </div>
+                  <p className="text-xs leading-5 text-muted-foreground">
+                    {card.text}
+                  </p>
+                </div>
+              )
+            })}
+          </div>
         </div>
       )}
       {uploadedFiles.length > 0 && (
@@ -758,7 +814,11 @@ export function ChatPanel({
             onCompositionEnd={handleCompositionEnd}
             onFocus={() => setIsInputFocused(true)}
             onBlur={() => setIsInputFocused(false)}
-            placeholder={messages.length > 0 ? 'Reply...' : 'Ask anything...'}
+            placeholder={
+              messages.length > 0
+                ? '继续追问...'
+                : '搜索 AI 课程、公司资料、最新动态或项目灵感...'
+            }
             spellCheck={false}
             value={input}
             disabled={isLoading || isToolInvocationInProgress()}

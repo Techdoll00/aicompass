@@ -16,15 +16,15 @@ export interface SearchModeConfig {
 export const SEARCH_MODE_CONFIGS: SearchModeConfig[] = [
   {
     value: 'quick',
-    label: 'Quick',
-    description: 'Streamlined search for fast, concise responses',
+    label: '速学',
+    description: '快速检索资料，生成简洁的学习版回答',
     icon: Search,
     color: 'text-amber-500'
   },
   {
     value: 'adaptive',
-    label: 'Adaptive',
-    description: 'Adaptive agentic search with intelligent query understanding',
+    label: '深研',
+    description: '多轮检索和规划，适合课程、论文和项目调研',
     icon: IconLogoOutline,
     color: 'text-violet-500'
   }

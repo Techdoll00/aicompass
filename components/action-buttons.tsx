@@ -3,12 +3,12 @@
 import { useEffect, useRef, useState } from 'react'
 
 import {
+  IconBook2 as Book,
   IconBulb as Bulb,
-  IconPencil as Pencil,
-  IconScale as Scale,
+  IconNews as News,
+  IconRoute as Route,
   IconSearch as Search,
-  IconSettings as Settings,
-  IconTool as Tool,
+  IconWorldSearch as WorldSearch,
   type TablerIcon
 } from '@tabler/icons-react'
 
@@ -28,29 +28,29 @@ interface ActionCategory {
 
 const actionCategories: ActionCategory[] = [
   {
-    icon: Scale,
-    label: 'Decide',
-    key: 'decide'
+    icon: Route,
+    label: '学习路径',
+    key: 'path'
   },
   {
-    icon: Tool,
-    label: 'Troubleshoot',
-    key: 'troubleshoot'
+    icon: Book,
+    label: '公开资料',
+    key: 'resources'
   },
   {
-    icon: Settings,
-    label: 'How-to',
-    key: 'howto'
+    icon: News,
+    label: 'AI 动态',
+    key: 'news'
+  },
+  {
+    icon: WorldSearch,
+    label: 'WebSearch',
+    key: 'websearch'
   },
   {
     icon: Bulb,
-    label: 'Understand',
-    key: 'understand'
-  },
-  {
-    icon: Pencil,
-    label: 'Create',
-    key: 'create'
+    label: '项目灵感',
+    key: 'project'
   }
 ]
 
@@ -59,36 +59,35 @@ const actionCategories: ActionCategory[] = [
 // tasks — the patterns that correlate with follow-up in real usage. Keep each
 // example self-contained (no "my notes"/"this file" referencing absent context).
 const promptSamples: Record<string, string[]> = {
-  troubleshoot: [
-    'My car starts then immediately stalls, but the electronics still work',
-    'Wi-Fi keeps dropping on one laptop but not my phone — how do I fix it?',
-    "My sourdough starter isn't rising after a week — what's wrong?",
-    'Next.js build fails with "Module not found" only in production'
+  path: [
+    '我想从零学习 AI Agent，请给我一条 14 天中英文学习路径',
+    '我是数字媒体专业学生，应该怎样系统学习 AIGC 和多模态 AI？',
+    '用大学生能看懂的方式解释 RAG、Agent、MCP 三者的区别',
+    '帮我规划一条从 Prompt Engineering 到 AI 应用开发的学习路线'
   ],
-  howto: [
-    'Move my photos off Google Photos without losing albums',
-    'Set up a Proxmox home server for self-hosting',
-    'Convert a folder of .txt files to clean HTML',
-    'Set up a Plex media server to stream my movies'
+  resources: [
+    '整理 Stanford、MIT、Harvard 适合大学生入门 AI 的公开课程',
+    '对比 OpenAI Cookbook、Anthropic Prompt Engineering 和 Hugging Face Course',
+    '找适合学习 RAG 的英文官方资料，并给中文导读',
+    '推荐 10 个学习 AI 应用开发的高质量中英文资料源'
   ],
-  decide: [
-    'Tesla vs Rivian — which should I buy?',
-    'Standing vs sitting desk for lower-back pain — which and why?',
-    'A budget mirrorless camera for travel under $1,000',
-    'Notion vs Obsidian for a personal knowledge base'
+  news: [
+    '今天 AI 圈有哪些值得大学生关注的新动态？',
+    '最近一周有哪些 AI 模型、产品或论文值得学习？',
+    '把最新 AI 新闻转成 5 张适合课堂展示的学习卡片',
+    '最近多模态 AI 有什么新进展？请用中文解释并保留英文关键词'
   ],
-  understand: [
-    'What causes the northern lights?',
-    'Why did the dinosaurs really go extinct?',
-    'How does a nuclear reactor actually generate electricity?',
-    // Timely slot — refresh seasonally (currently WWDC 2026).
-    'What did Apple announce at WWDC 2026?'
+  websearch: [
+    'Search the web for the latest DeepSeek updates and explain them in Chinese',
+    'Find recent academic and official sources about AI agents in 2026',
+    'Search GitHub for popular open-source RAG or AI search projects and compare them',
+    'Find current tutorials for building multimodal AI apps with Next.js'
   ],
-  create: [
-    'Draft a 5-question Ancient Rome quiz with A–D answers',
-    'Outline a peer-support group for a prison setting',
-    'Create a high-protein meal plan for a week on a budget',
-    'Draft a beginner 3-day-per-week workout split'
+  project: [
+    '基于 AI 搜索和 RAG，帮我生成一个可参赛的大学生项目方案',
+    '给数字媒体专业设计 5 个 AI 应用课程作业选题',
+    '把“AI 学习搜索平台”拆成 MVP 功能、技术栈和演示脚本',
+    '根据最近 AI 动态，生成 3 个能部署到 Vercel 的项目创意'
   ]
 }
 
