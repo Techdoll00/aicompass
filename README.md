@@ -23,7 +23,7 @@ Built on [Morphic](https://github.com/miurla/morphic) — customized with Chines
 </p>
 
 <p align="center">
-  <a href="https://ai-compass-deploy-three.vercel.app"><img src="https://img.shields.io/badge/Live-Demo-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" /></a>
+  <a href="https://ai-compass-deploy-git-main-lnhs-projects.vercel.app"><img src="https://img.shields.io/badge/Live-Demo-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" /></a>
   <a href="https://github.com/miurla/morphic"><img src="https://img.shields.io/badge/Upstream-Morphic-6366f1?style=flat-square&logo=github&logoColor=white" alt="Morphic" /></a>
 </p>
 

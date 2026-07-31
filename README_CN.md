@@ -7,7 +7,7 @@
 基于 [Morphic](https://github.com/miurla/morphic) 构建 — 加入速学、深研两种模式，为中国大学生的学习场景定制。
 
 <p align="center">
-  <a href="https://ai-compass-deploy-three.vercel.app"><img src="https://img.shields.io/badge/在线体验-Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" /></a>
+  <a href="https://ai-compass-deploy-git-main-lnhs-projects.vercel.app"><img src="https://img.shields.io/badge/在线体验-Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" /></a>
   <a href="https://github.com/miurla/morphic"><img src="https://img.shields.io/badge/上游-Morphic-6366f1?style=flat-square&logo=github&logoColor=white" alt="Morphic" /></a>
 </p>
 
@@ -181,7 +181,7 @@ AI Compass：
 
 ## 来试试
 
-在线体验：[ai-compass-deploy-three.vercel.app](https://ai-compass-deploy-three.vercel.app)
+在线体验：[ai-compass-deploy-git-main-lnhs-projects.vercel.app](https://ai-compass-deploy-git-main-lnhs-projects.vercel.app)
 
 有问题？[开 issue](https://github.com/Techdoll00/aicompass/issues) 直接聊。
 
