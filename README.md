@@ -19,7 +19,11 @@ Built on [Morphic](https://github.com/miurla/morphic) — customized with Chines
 </p>
 
 <p align="center">
-  <a href="DEPLOYMENT_URL_PLACEHOLDER"><img src="https://img.shields.io/badge/Live-Demo-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" /></a>
+  <b>English</b> · <a href="./README_CN.md">中文</a>
+</p>
+
+<p align="center">
+  <a href="https://ai-compass-deploy-three.vercel.app"><img src="https://img.shields.io/badge/Live-Demo-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" /></a>
   <a href="https://github.com/miurla/morphic"><img src="https://img.shields.io/badge/Upstream-Morphic-6366f1?style=flat-square&logo=github&logoColor=white" alt="Morphic" /></a>
 </p>
 
