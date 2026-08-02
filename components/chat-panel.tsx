@@ -478,7 +478,8 @@ export function ChatPanel({
             </div>
           </div>
           <p className="max-w-2xl text-center text-sm leading-6 text-muted-foreground md:text-base">
-            搜索最新 AI 动态，检索中英文公开学习资料，并把答案整理成引用来源、术语卡片、学习路径和项目方案。
+            搜索最新 AI
+            动态，检索中英文公开学习资料，并把答案整理成引用来源、术语卡片、学习路径和项目方案。
           </p>
           <div className="grid w-full max-w-3xl grid-cols-1 gap-2 sm:grid-cols-2">
             {learningCards.map(card => {

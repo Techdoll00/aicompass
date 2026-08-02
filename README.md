@@ -35,13 +35,13 @@ Built on [Morphic](https://github.com/miurla/morphic) — customized with Chines
 
 College students search differently. You're not just looking for facts — you're trying to:
 
-| Student need | How AI Compass helps |
-|---|---|
-| **Understand a new topic fast** | 速学 mode — quick, cited summaries with source evidence |
-| **Go deep for a paper or project** | 深研 mode — recursive research, multi-source synthesis |
-| **Find the best learning resources** | AI-powered search across courses, docs, papers, GitHub |
-| **Plan a project or thesis** | Project planning workflow with structured output |
-| **Read a paper in your language** | Bilingual (Chinese/English) search and answer generation |
+| Student need                         | How AI Compass helps                                     |
+| ------------------------------------ | -------------------------------------------------------- |
+| **Understand a new topic fast**      | 速学 mode — quick, cited summaries with source evidence  |
+| **Go deep for a paper or project**   | 深研 mode — recursive research, multi-source synthesis   |
+| **Find the best learning resources** | AI-powered search across courses, docs, papers, GitHub   |
+| **Plan a project or thesis**         | Project planning workflow with structured output         |
+| **Read a paper in your language**    | Bilingual (Chinese/English) search and answer generation |
 
 Traditional search gives you 10 blue links. AI Compass gives you a **cited answer with inline evidence** — like having a research assistant who actually reads the sources.
 
@@ -105,17 +105,17 @@ bun dev
 
 ## Tech stack
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | Next.js 16 (App Router, RSC, Turbopack) |
-| UI | React 19 + Tailwind CSS + shadcn/ui |
-| AI | Vercel AI SDK 5.0 (streaming, GenerativeUI) |
-| Database | PostgreSQL + Drizzle ORM |
-| Cache | Redis (Upstash or local) |
-| Search | Tavily / SearXNG / Brave / Exa |
-| Auth | Supabase Auth |
-| Runtime | Bun |
-| Dev tools | ESLint + Prettier + Vitest |
+| Layer     | Technology                                  |
+| --------- | ------------------------------------------- |
+| Framework | Next.js 16 (App Router, RSC, Turbopack)     |
+| UI        | React 19 + Tailwind CSS + shadcn/ui         |
+| AI        | Vercel AI SDK 5.0 (streaming, GenerativeUI) |
+| Database  | PostgreSQL + Drizzle ORM                    |
+| Cache     | Redis (Upstash or local)                    |
+| Search    | Tavily / SearXNG / Brave / Exa              |
+| Auth      | Supabase Auth                               |
+| Runtime   | Bun                                         |
+| Dev tools | ESLint + Prettier + Vitest                  |
 
 ---
 
@@ -146,17 +146,17 @@ bun dev
 
 ## Comparison
 
-| Feature | AI Compass | ChatGPT Search | Perplexity | Google |
-|---------|------------|---------------|------------|--------|
-| Generative UI | Rich inline components | Plain text | Rich cards | Links only |
-| Search modes | 速学 + 深研 | One mode | One mode | N/A |
-| Multi-search provider | Tavily + SearXNG + Brave + Exa | Bing | Proprietary | Proprietary |
-| Self-hosted | Docker / Vercel | No | No | No |
-| Open source | Apache 2.0 | No | No | No |
-| Bilingual (CN/EN) | Built-in | Partial | Partial | Partial |
-| File upload + Q&A | Yes | Yes | Yes | No |
-| Student workflows | Built-in | No | No | No |
-| Free | Self-host = free | Free tier | Free tier | Free |
+| Feature               | AI Compass                     | ChatGPT Search | Perplexity  | Google      |
+| --------------------- | ------------------------------ | -------------- | ----------- | ----------- |
+| Generative UI         | Rich inline components         | Plain text     | Rich cards  | Links only  |
+| Search modes          | 速学 + 深研                    | One mode       | One mode    | N/A         |
+| Multi-search provider | Tavily + SearXNG + Brave + Exa | Bing           | Proprietary | Proprietary |
+| Self-hosted           | Docker / Vercel                | No             | No          | No          |
+| Open source           | Apache 2.0                     | No             | No          | No          |
+| Bilingual (CN/EN)     | Built-in                       | Partial        | Partial     | Partial     |
+| File upload + Q&A     | Yes                            | Yes            | Yes         | No          |
+| Student workflows     | Built-in                       | No             | No          | No          |
+| Free                  | Self-host = free               | Free tier      | Free tier   | Free        |
 
 ---
 

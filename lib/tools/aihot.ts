@@ -9,12 +9,17 @@ const aihotSchema = z.object({
   mode: z
     .enum(['selected', 'all', 'daily'])
     .default('selected')
-    .describe('selected for curated items, all for full feed, daily for AIHOT daily report'),
+    .describe(
+      'selected for curated items, all for full feed, daily for AIHOT daily report'
+    ),
   category: z
     .enum(['ai-models', 'ai-products', 'industry', 'paper', 'tip'])
     .optional()
     .describe('Optional AIHOT category filter'),
-  q: z.string().optional().describe('Optional keyword search, such as OpenAI, RAG, Sora'),
+  q: z
+    .string()
+    .optional()
+    .describe('Optional keyword search, such as OpenAI, RAG, Sora'),
   days: z
     .number()
     .min(1)
@@ -41,9 +46,7 @@ async function fetchAIHot(input: AIHotInput) {
   const params = aihotSchema.parse(input)
 
   const url = new URL(
-    params.mode === 'daily'
-      ? '/api/public/daily'
-      : '/api/public/items',
+    params.mode === 'daily' ? '/api/public/daily' : '/api/public/items',
     AIHOT_BASE_URL
   )
 
@@ -64,7 +67,9 @@ async function fetchAIHot(input: AIHotInput) {
   })
 
   if (!response.ok) {
-    throw new Error(`AIHOT request failed: ${response.status} ${response.statusText}`)
+    throw new Error(
+      `AIHOT request failed: ${response.status} ${response.statusText}`
+    )
   }
 
   return response.json()

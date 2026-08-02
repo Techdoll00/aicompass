@@ -71,7 +71,8 @@ export function FeedbackModal({ open, onOpenChange }: FeedbackModalProps) {
         <DialogHeader>
           <DialogTitle>Give feedback</DialogTitle>
           <DialogDescription>
-            Your feedback helps us improve AI Compass. Let us know what you think!
+            Your feedback helps us improve AI Compass. Let us know what you
+            think!
           </DialogDescription>
         </DialogHeader>
 
